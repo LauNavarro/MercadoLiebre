@@ -1,0 +1,300 @@
+/* Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; */
+
+/* Tamaños Tipográficos
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: #EAC926;
+    padding: 20px;
+}
+
+.header-top-bar{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 50%;
+}
+
+.header-text{
+    margin: auto;
+    color: #222222;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.burger-menu{
+    color: #ebebeb;
+    background-color: #03264c;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+.searcher{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.search{
+    text-align: left;
+    font-size: 16px;
+    padding: 12px 2px 10px 6px;
+    margin-left: 10px;
+    background-color: #ebebeb;
+    color: #666;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    max-height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.icon-search{
+    padding: 12px 3px;
+    background-color: #ebebeb;
+    color: #666;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.main-navbar{
+    display: none;
+}
+
+.left-navbar, .right-navbar{
+    list-style: none;
+    padding-left: 0px;
+    text-align: left
+}
+
+.main-navbar a{
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    font-size: 17px;
+    padding: 5px 0;
+}
+
+.main-navbar i{
+    color: #222222;
+    padding-left: 3px;
+}
+
+.banner{
+    width: 100%;
+}
+
+body{
+    background-color: #ebebeb;
+    font-family: Roboto;
+}
+
+main{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+}
+.section-articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section-name{
+    color: rgb(99, 98, 98);
+    text-align: left;
+    padding: 20px 5px;
+    font-weight: 600 ;
+    font-size: 24px;
+    width: 100%;
+}
+
+article{
+    margin: 5px;
+    width: 100%;
+}
+
+article img{
+    width: 100%;
+}
+
+.product-detail{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white; /* Cómo rellenar la parte de abajo cuando el tamaño de la pantalla es 395 p.e */
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    position: relative;
+}
+
+.truck{
+    display: block;
+    font-size: 20px;
+    color: #39b54a;
+    background-color: #fff;
+    padding: 5px;
+    border: solid 1px #39b54a;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -20px;
+}
+
+.price{
+    color: #222222;
+    font-size: 18px;
+    width: 30%;
+    min-width: 80px;
+    text-align: left;
+}
+
+.discount{
+    font-size: 16px;
+    color: #39b54a;
+    width: 70%;
+    text-align: left;
+}
+
+.product-description{
+    font-size: 16px;
+    margin: 20px 0;
+    color: #666;
+}
+
+footer{
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-icon{
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+.footer-item{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.footer-description{
+    font-size: 12px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2px;
+}
+
+@media (min-width: 360px){
+    .main-navbar{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .burger-menu{
+        display: none;
+    }
+    article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
+    }
+    .price{
+        font-size: 17px;
+        min-width: 75px;
+    }
+    .discount{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px){
+    .header-top-bar{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        align-items: center;
+    }
+    .logo{
+        width: 28%;
+    }
+    .header-text{
+        display: block;
+        font-size: 16px;
+        width: 40%;
+        margin: 0 2px;
+        align-items: center;
+    }
+    .searcher{
+        width: 30%;
+    }
+    .search{
+        padding: 6px 2px 5px 6px;
+    }
+    .icon-search{
+        padding: 7px 3px;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .main-navbar{
+        justify-content: space-between;
+    }
+    .main-navbar ul{
+        display: flex;
+    }
+    .main-navbar li{
+        margin: 0 8px;
+    }
+    article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 22.5%;
+    }
+}
+
+@media (min-width: 1200px){
+    .header-top-bar, .main-navbar{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .header-text{
+        max-width: none;
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0;
+    }
+    .main-navbar{
+        margin-top: 30px;
+    }
+    .main-navbar li{
+        margin: 0 10px;
+    }
+    .main-navbar a{
+        font-size: 19px;
+    }
+}
