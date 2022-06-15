@@ -22,6 +22,9 @@ Descripciones: 16px */
 .header{
     background-color: #EAC926;
     padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 .header-top-bar{
@@ -72,14 +75,20 @@ Descripciones: 16px */
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    border: none;
+}
+
+.search:focus{
+    outline: none;
 }
 
 .icon-search{
-    padding: 12px 3px;
+    padding: 12px 3px 13px;
     background-color: #ebebeb;
     color: #666;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    border: none;
 }
 
 .main-navbar{
@@ -120,6 +129,10 @@ main{
     text-align: center;
     padding: 20px 0 10px;
     border-radius: 7px;
+}
+
+.register-form{
+    margin-top: 234px;
 }
 
 .input{
@@ -180,6 +193,7 @@ footer{
 .footer-icon{
     padding-top: 30px;
     font-size: 30px;
+    color: #3483fa;
 }
 
 .footer-item{
@@ -205,7 +219,9 @@ footer{
     .burger-menu{
         display: none;
     }
-    
+    .register-form{
+        margin-top: 300px;
+    }
 }
 
 @media (min-width: 768px){
@@ -255,6 +271,9 @@ footer{
         margin: 20px auto;
         max-width: 50%;
         }
+        .register-form{
+            margin-top: 150px;
+        }
 }
 
 @media (min-width: 1200px){
@@ -276,5 +295,8 @@ footer{
     }
     .main-navbar a{
         font-size: 19px;
+    }
+    .register-form{
+        margin-top: 200px;
     }
 }

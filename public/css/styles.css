@@ -22,6 +22,10 @@ Descripciones: 16px */
 .header{
     background-color: #EAC926;
     padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 5;
 }
 
 .header-top-bar{
@@ -72,14 +76,20 @@ Descripciones: 16px */
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    border: none;
+}
+
+.search:focus{
+    outline: none;
 }
 
 .icon-search{
-    padding: 12px 3px;
+    padding: 12px 3px 13px;
     background-color: #ebebeb;
     color: #666;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    border: none;
 }
 
 .main-navbar{
@@ -107,6 +117,7 @@ Descripciones: 16px */
 
 .banner{
     width: 100%;
+    margin-top: 235px;
 }
 
 body{
@@ -119,6 +130,7 @@ main{
     width: 90%;
     text-align: center;
 }
+
 .section-articles{
     display: flex;
     flex-wrap: wrap;
@@ -137,6 +149,12 @@ main{
 article{
     margin: 5px;
     width: 100%;
+    transition: all 450ms;
+    background-color: white;
+}
+
+article:hover{
+    box-shadow: 0px 0px 10px rgb(19, 107, 122);
 }
 
 article img{
@@ -146,7 +164,6 @@ article img{
 .product-detail{
     display: flex;
     flex-wrap: wrap;
-    background-color: white; /* Cómo rellenar la parte de abajo cuando el tamaño de la pantalla es 395 p.e */
     border-top: 1px solid #ebebeb;
     padding: 15px;
     position: relative;
@@ -163,6 +180,11 @@ article img{
     position: absolute;
     right: 20px;
     top: -20px;
+    transition: all 450ms;
+}
+
+article:hover .truck{
+    transform:rotateZ(-90deg);
 }
 
 .price{
@@ -184,6 +206,12 @@ article img{
     font-size: 16px;
     margin: 20px 0;
     color: #666;
+    display: none;
+    transition: all 450ms;
+}
+
+article:hover .product-description{
+    display: contents;
 }
 
 footer{
@@ -195,6 +223,12 @@ footer{
 .footer-icon{
     padding-top: 30px;
     font-size: 30px;
+    color: #3483fa;
+    transition: color 450ms;
+}
+
+.footer-icon:hover{
+    color: #03264c;
 }
 
 .footer-item{
@@ -206,9 +240,15 @@ footer{
 
 .footer-description{
     font-size: 12px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 7%;
+    margin-right: 7%;
     margin-top: 2px;
+}
+
+.footer-copyright{
+    font-size: 12px;
+    margin-top: 40px;
+    margin-left: 0;
 }
 
 @media (min-width: 360px){
@@ -230,6 +270,15 @@ footer{
     }
     .discount{
         font-size: 15px;
+    }
+    .banner{
+        margin-top: 304px;
+    }
+}
+
+@media(min-width: 504px){
+    .banner{
+        margin-top: 293px;
     }
 }
 
@@ -275,6 +324,27 @@ footer{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 22.5%;
     }
+    .banner{
+        margin-top: 178px;
+    }
+}
+
+@media (min-width: 812px){
+    .banner{
+        margin-top: 160px;
+    }
+}
+
+@media (min-width: 1024px){
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    footer section{
+        width: 33%;
+    }
 }
 
 @media (min-width: 1200px){
@@ -296,5 +366,8 @@ footer{
     }
     .main-navbar a{
         font-size: 19px;
+    }
+    .banner{
+        margin-top: 221px;
     }
 }
