@@ -182,6 +182,11 @@ input[type="date" i], input[type="file" i] {
     border-radius: 5px;
     font-size: 18px;
     margin: 5px 0;
+    transition: all 450ms;
+}
+
+.button:hover{
+    background-color: #0022AA;
 }
 
 footer{
@@ -194,6 +199,11 @@ footer{
     padding-top: 30px;
     font-size: 30px;
     color: #3483fa;
+    transition: color 450ms;
+}
+
+.footer-icon:hover{
+    color: #03264c;
 }
 
 .footer-item{

@@ -177,6 +177,11 @@ footer{
     padding-top: 30px;
     font-size: 30px;
     color: #3483fa;
+    transition: color 450ms;
+}
+
+.footer-icon:hover{
+    color: #03264c;
 }
 
 .footer-item{
